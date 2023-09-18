@@ -24,7 +24,7 @@ jobs:
         run: ./script/verify-no-unstaged-changes.sh
 
       - name: Release
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           gh release create v${{github.sha}} --generate-notes ./_layout/action_cache.zip ./_layout/action_cache.tar.gz
         env:
