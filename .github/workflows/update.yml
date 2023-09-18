@@ -1,0 +1,29 @@
+name: Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1" # 5 AM UTC on Monday
+
+jobs:
+  update:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure global git auth
+        run: |
+          git config --global http.https://github.com/.extraheader "$(git config --local http.https://github.com/.extraheader)"
+          git config --local --unset http.https://github.com/.extraheader
+
+      - name: Update actions
+        run: ./script/update-action.sh --all
+
+      - name: Create pull request
+        run: ./script/create-pull-request.sh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

@@ -1,0 +1,76 @@
+{
+  "owner": "actions",
+  "repo": "download-artifact",
+  "patterns": [
+    "+^main$",
+    "+^v[0-9]+(\\.[0-9]+){0,2}$"
+  ],
+  "branches": {
+    "main": "e9ef242655d12993efdcda9058dee2db83a2cb9b"
+  },
+  "defaultBranch": "main",
+  "tags": {
+    "v1": {
+      "commit": "18f0f591fbc635562c815484d73b6e8e3980482e",
+      "tag": "fdafc3f9f2e2a522dc1d230e6a03de57a1e71c95"
+    },
+    "v1.0.0": {
+      "commit": "18f0f591fbc635562c815484d73b6e8e3980482e",
+      "tag": "f0be90160510480ed5a727db00cf1de19c72ea20"
+    },
+    "v2": {
+      "commit": "cbed621e49e4c01b044d60f6c80ea4ed6328b281"
+    },
+    "v2.0": {
+      "commit": "1de1dea89c32dcb1f37183c96fe85cfe067b682a"
+    },
+    "v2.0.1": {
+      "commit": "1ac47ba4b6af92e65d0438b64ce1ea49ce1cc48d"
+    },
+    "v2.0.10": {
+      "commit": "3be87be14a055c47b01d3bd88f8fe02320a9bb60"
+    },
+    "v2.0.2": {
+      "commit": "381af06b4268a1e0ad7b7c7e5a09f1894977120f"
+    },
+    "v2.0.3": {
+      "commit": "80d2d4023c185001eacb50e37afd7dd667ba8044"
+    },
+    "v2.0.4": {
+      "commit": "b3cedea9bed36890c824f4065163b667eeca272b"
+    },
+    "v2.0.5": {
+      "commit": "c3f5d00c8784369c43779f3d2611769594a61f7a"
+    },
+    "v2.0.6": {
+      "commit": "f8e41fbffeebb48c0273438d220bb2387727471f"
+    },
+    "v2.0.7": {
+      "commit": "f144d3c3916a86f4d6b11ff379d17a49d8f85dbc"
+    },
+    "v2.0.8": {
+      "commit": "4a7a711286f30c025902c28b541c10e147a9b843"
+    },
+    "v2.0.9": {
+      "commit": "158ca71f7c614ae705e79f25522ef4658df18253"
+    },
+    "v2.1.0": {
+      "commit": "f023be2c48cc18debc3bacd34cb396e0295e2869"
+    },
+    "v2.1.1": {
+      "commit": "cbed621e49e4c01b044d60f6c80ea4ed6328b281"
+    },
+    "v3": {
+      "commit": "9bc31d5ccc31df68ecc42ccf4149144866c47d8a"
+    },
+    "v3.0.0": {
+      "commit": "fb598a63ae348fa914e94cd0ff38f362e927b741"
+    },
+    "v3.0.1": {
+      "commit": "9782bd6a9848b53b110e712e20e42d89988822b7"
+    },
+    "v3.0.2": {
+      "commit": "9bc31d5ccc31df68ecc42ccf4149144866c47d8a"
+    }
+  }
+}

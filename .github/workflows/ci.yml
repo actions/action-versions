@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request: {}
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure global git auth
+        run: git config --global http.https://github.com/.extraheader "$(git config --local http.https://github.com/.extraheader)"
+
+      - name: Build
+        run: ./script/build.sh
+
+      - name: Verify no unstaged changes
+        run: ./script/verify-no-unstaged-changes.sh
+
+  publish:
+    if: github.event_name != 'pull_request'
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        ./script/build.sh
+        echo ${{ github.sha }} > ./_layout/SHA1

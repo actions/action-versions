@@ -1,0 +1,84 @@
+{
+  "owner": "actions",
+  "repo": "cache",
+  "patterns": [
+    "+^main$",
+    "+^v[3-9]+(\\.[0-9]+){0,2}$"
+  ],
+  "branches": {
+    "main": "704facf57e6136b1bc63b828d79edcd491f0ee84"
+  },
+  "defaultBranch": "main",
+  "tags": {
+    "v3": {
+      "commit": "704facf57e6136b1bc63b828d79edcd491f0ee84",
+      "tag": "052d3a99864b25538f4f499e375578f64851952e"
+    },
+    "v3.0.0": {
+      "commit": "4b0cf6cc4619e737324ddfcec08fff2413359514"
+    },
+    "v3.0.1": {
+      "commit": "136d96b4aee02b1f0de3ba493b1d47135042d9c0"
+    },
+    "v3.0.10": {
+      "commit": "56461b9eb0f8438fd15c7a9968e3c9ebb18ceff1"
+    },
+    "v3.0.11": {
+      "commit": "9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7"
+    },
+    "v3.0.2": {
+      "commit": "48af2dc4a9e8278b89d7fa154b955c30c6aaab09"
+    },
+    "v3.0.3": {
+      "commit": "30f413bfed0a2bc738fdfd409e5a9e96b24545fd"
+    },
+    "v3.0.4": {
+      "commit": "c3f1317a9e7b1ef106c153ac8c0f00fed3ddbc0d"
+    },
+    "v3.0.5": {
+      "commit": "0865c47f36e68161719c5b124609996bb5c40129"
+    },
+    "v3.0.6": {
+      "commit": "f4278025ab0f432ce369118909e46deec636f50c"
+    },
+    "v3.0.7": {
+      "commit": "a7c34adf76222e77931dedbf4a45b2e4648ced19"
+    },
+    "v3.0.8": {
+      "commit": "fd5de65bc895cf536527842281bea11763fefd77"
+    },
+    "v3.0.9": {
+      "commit": "ac8075791e805656e71b4ba23325ace9e3421120"
+    },
+    "v3.2.0": {
+      "commit": "c17f4bf4666a8001b1a45c09eb7a485c41aa64c3"
+    },
+    "v3.2.1": {
+      "commit": "c1a5de879eb890d062a85ee0252d6036480b1fe2"
+    },
+    "v3.2.2": {
+      "commit": "4723a57e26efda3a62cbde1812113b730952852d"
+    },
+    "v3.2.3": {
+      "commit": "58c146cc91c5b9e778e71775dfe9bf1442ad9a12"
+    },
+    "v3.2.4": {
+      "commit": "627f0f41f6904a5b1efbaed9f96d9eb58e92e920"
+    },
+    "v3.2.5": {
+      "commit": "6998d139ddd3e68c71e9e398d8e40b71a2f39812"
+    },
+    "v3.2.6": {
+      "commit": "69d9d449aced6a2ede0bc19182fadc3a0a42d2b0"
+    },
+    "v3.3.0": {
+      "commit": "940f3d7cf195ba83374c77632d1e2cbb2f24ae68"
+    },
+    "v3.3.1": {
+      "commit": "88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8"
+    },
+    "v3.3.2": {
+      "commit": "704facf57e6136b1bc63b828d79edcd491f0ee84"
+    }
+  }
+}
