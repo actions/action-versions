@@ -23,20 +23,9 @@ jobs:
       - name: Verify no unstaged changes
         run: ./script/verify-no-unstaged-changes.sh
 
-  publish:
-    if: github.event_name != 'pull_request'
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Build
-      run: |
-        ./script/build.sh
-
-    - name: Release
-      run: |
-        gh release create v${{github.sha}} --generate-notes ./_layout/action_cache.zip ./_layout/action_cache.tar.gz
-      env:
-        GH_TOKEN: ${{ github.token }}
-
+      - name: Release
+        if: github.event_name != 'pull_request'
+        run: |
+          gh release create v${{github.sha}} --generate-notes ./_layout/action_cache.zip ./_layout/action_cache.tar.gz
+        env:
+          GH_TOKEN: ${{ github.token }}
