@@ -1,7 +1,7 @@
 mkdir actions_setup-go
 pushd actions_setup-go
-curl -s -S -L -o '883490dfd06f396ebe0b738bc313a53cf9d851e5.tar.gz' 'https://api.github.com/repos/actions/setup-go/tarball/883490dfd06f396ebe0b738bc313a53cf9d851e5'
-curl -s -S -L -o '883490dfd06f396ebe0b738bc313a53cf9d851e5.zip' 'https://api.github.com/repos/actions/setup-go/zipball/883490dfd06f396ebe0b738bc313a53cf9d851e5'
+curl -s -S -L -o 'bfd2fb341f32be7281829126376a12a780ca79fc.tar.gz' 'https://api.github.com/repos/actions/setup-go/tarball/bfd2fb341f32be7281829126376a12a780ca79fc'
+curl -s -S -L -o 'bfd2fb341f32be7281829126376a12a780ca79fc.zip' 'https://api.github.com/repos/actions/setup-go/zipball/bfd2fb341f32be7281829126376a12a780ca79fc'
 curl -s -S -L -o '77b162d042858409656f087cab0246511e670694.tar.gz' 'https://api.github.com/repos/actions/setup-go/tarball/77b162d042858409656f087cab0246511e670694'
 curl -s -S -L -o '77b162d042858409656f087cab0246511e670694.zip' 'https://api.github.com/repos/actions/setup-go/zipball/77b162d042858409656f087cab0246511e670694'
 curl -s -S -L -o '58fca98f91e83c6442c09dc7175251c60ee9877c.tar.gz' 'https://api.github.com/repos/actions/setup-go/tarball/58fca98f91e83c6442c09dc7175251c60ee9877c'

@@ -23,7 +23,7 @@ git push --set-upstream origin "$branch"
 
 # Open pull request
 url="https://api.github.com/repos/$GITHUB_REPOSITORY/pulls" # GITHUB_REPOSITORY format is: OWNER/REPO
-body="{\"title\": \"$branch\", \"body\": \"$branch\", \"head\": \"$branch\", \"base\": \"master\"}"
+body="{\"title\": \"$branch\", \"body\": \"$branch\", \"head\": \"$branch\", \"base\": \"main\"}"
 http_code="$(curl --silent --output response.json --write-out '%{http_code}' --header "Authorization: bearer $GITHUB_TOKEN" --request POST --data "$body" "$url")"
 if [[ "$http_code" != "201" ]]; then
   echo "Unexpected HTTP CODE '$http_code'"
