@@ -37,4 +37,6 @@ jobs:
     - name: Release
       run: |
         gh release create v${{github.sha}} --generate-notes ./_layout/action_cache.zip ./_layout/action_cache.tar.gz
+      env:
+        GH_TOKEN: ${{ github.token }}
 
