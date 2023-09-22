@@ -7,5 +7,13 @@ This allows you to speedup actions execution without the cost of downloading act
 
 A configuration file exists for each repository (see `config/actions/`). The refs are pinned to specific commit SHAs.
 
+### Which refs are included?
+
+By default only `main` and version tags are included. For example: `v1` or `v2.0.1`
+
+Preview versions are intentionally excluded. For example: `v2-beta`
+
+Optional args may be supplied to control which refs are included. See `script/add-action.sh --help` for more info.
+
 ### Contributing
-See the [contribution guide](../github/CONTRIBUTING.MD). Currently we are not taking requests for non first actions to be added at this time.
+See the [contribution guide](../github/CONTRIBUTING.MD). Currently we are not taking requests for non first party actions to be added at this time.

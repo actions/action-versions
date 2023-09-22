@@ -16,14 +16,6 @@ __Example adding an action__
 script/add-action.sh actions/checkout
 ```
 
-### Which refs are included?
-
-By default only `main` and version tags are included. For example: `v1` or `v2.0.1`
-
-Preview versions are intentionally excluded. For example: `v2-beta`
-
-Optional args may be supplied to control which refs are included. See `script/add-action.sh --help` for more info.
-
 ### Update an action
 
 To update the refs for an action, run `script/update-action.sh`
