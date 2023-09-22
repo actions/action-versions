@@ -1,9 +1,13 @@
 
 # GitHub First Party Actions Cache
 
-This repository builds the layout for first party actions cache.
+This repository contains the code and scripts responsible for caching actions locally on a GitHub [Actions Runner](https://github.com/actions/runner).
 
 A configuration file exists for each repository (see `config/actions/`). The refs are pinned to specific commit SHAs.
+
+### Contributing
+See the [contribution guide](../github/CONTRIBUTING.MD). Currently we are not taking requests for non first actions to be added at this time.
+
 
 ## Build
 
@@ -23,7 +27,7 @@ script/add-action.sh actions/checkout
 
 ### Which refs are included?
 
-By default only `master` and version tags are included. For example: `v1` or `v2.0.1`
+By default only `main` and version tags are included. For example: `v1` or `v2.0.1`
 
 Preview versions are intentionally excluded. For example: `v2-beta`
 
