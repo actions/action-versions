@@ -55,7 +55,7 @@ pushd "$zipball_layout_dir"
 find . -type f -name "*.tar.gz" -delete
 ls -l -R ./
 echo "Creating action_versions_zipball in ${zipball_layout_dir}"
-pwsh -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "Compress-Archive -Path \"${zipball_layout_dir}\" -DestinationPath \"${layout_dir}\action_versions.zip\""
+pwsh -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "Compress-Archive -Path \"${zipball_layout_dir}\\*\" -DestinationPath \"${layout_dir}\action_versions.zip\""
 popd
 
 cp -r "$layout_dir" "$tarball_layout_dir"

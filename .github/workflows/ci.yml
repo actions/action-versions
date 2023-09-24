@@ -23,6 +23,12 @@ jobs:
       - name: Verify no unstaged changes
         run: ./script/verify-no-unstaged-changes.sh
 
+      - name: Test tarball
+        run: ./script/test.sh ./_layout/action_versions.tar.gz
+      
+      - name: Test zipball
+        run: ./script/test.sh ./_layout/action_versions.zip
+
       - name: Release
         if: github.event_name == 'workflow_dispatch'
         run: |
