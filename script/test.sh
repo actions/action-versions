@@ -74,10 +74,7 @@ function test_zip ()
       mkdir $commit_sha
       
       sha_archive_full_path=$(realpath "$file")
-      ls -l "$sha_archive_full_path"
-      whoami
       chmod u+r "$sha_archive_full_path"
-      ls -l "$sha_archive_full_path"
       pushd $commit_sha
       unzip -q "$sha_archive_full_path"
       all_fs_items=(*)
