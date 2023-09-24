@@ -74,6 +74,8 @@ function test_zip ()
       mkdir $commit_sha
       
       sha_archive_full_path=$(realpath "$file")
+      ls -l "$sha_archive_full_path"
+      whoami
       pushd $commit_sha
       unzip -q "$sha_archive_full_path"
       all_fs_items=(*)
