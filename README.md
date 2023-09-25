@@ -1,5 +1,5 @@
 
-# GitHub First Party Actions Cache
+## GitHub First Party Actions Cache
 
 This repository contains the code and scripts responsible for caching actions locally on a GitHub [Actions Runner](https://github.com/actions/runner).
 
@@ -15,5 +15,13 @@ Preview versions are intentionally excluded. For example: `v2-beta`
 
 Optional args may be supplied to control which refs are included. See `script/add-action.sh --help` for more info.
 
-### Contributing
+## License 
+
+This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE.txt) for the full terms.
+
+## Maintainers 
+
+[CODEOWNERS](./CODEOWNERS)
+
+## Contributing
 See the [contribution guide](../github/CONTRIBUTING.MD). Currently we are not taking requests for non first party actions to be added at this time.
