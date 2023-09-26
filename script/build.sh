@@ -54,17 +54,17 @@ cp -r "$layout_dir" "$zipball_layout_dir"
 pushd "$zipball_layout_dir"
 find . -type f -name "*.tar.gz" -delete
 ls -l -R ./
-echo "Creating action_versions_zipball in ${zipball_layout_dir}"
-pwsh -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "Compress-Archive -Path \"${zipball_layout_dir}\\*\" -DestinationPath \"${layout_dir}\action_versions.zip\""
+echo "Creating action-versions zipball in ${zipball_layout_dir}"
+pwsh -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "Compress-Archive -Path \"${zipball_layout_dir}\\*\" -DestinationPath \"${layout_dir}\action-versions.zip\""
 popd
 
 cp -r "$layout_dir" "$tarball_layout_dir"
 pushd "$tarball_layout_dir"
 find . -type f -name "*.zip" -delete
 ls -l -R ./
-echo "Creating action_versions.tar.gz in ${tarball_layout_dir}"
+echo "Creating action-versions tarball in ${tarball_layout_dir}"
 pushd "$layout_dir"
-tar -czf "action_versions.tar.gz" -C "${tarball_layout_dir}" .
+tar -czf "action-versions.tar.gz" -C "${tarball_layout_dir}" .
 popd
 popd
 

@@ -24,14 +24,14 @@ jobs:
         run: ./script/verify-no-unstaged-changes.sh
 
       - name: Test tarball
-        run: ./script/test.sh ./_layout/action_versions.tar.gz
+        run: ./script/test.sh ./_layout/action-versions.tar.gz
       
       - name: Test zipball
-        run: ./script/test.sh ./_layout/action_versions.zip
+        run: ./script/test.sh ./_layout/action-versions.zip
 
       - name: Release
         if: github.event_name == 'workflow_dispatch'
         run: |
-          gh release create v${{github.sha}} --generate-notes ./_layout/action_versions.zip ./_layout/action_versions.tar.gz
+          gh release create v${{github.sha}} --generate-notes ./_layout/action-versions.zip ./_layout/action-versions.tar.gz
         env:
           GH_TOKEN: ${{ github.token }}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: script/test.sh ./_layout/action_versions.[tar.gz|zip]
+# Usage: script/test.sh ./_layout/action-versions.[tar.gz|zip]
 #        Verify the archive is well-formed with an action.[yaml|yml]
 
 set -e
