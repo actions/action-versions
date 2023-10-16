@@ -1,7 +1,7 @@
 mkdir actions_setup-python
 pushd actions_setup-python
-curl -s -S -L -o '3467d92d48812f2876be76290f77c3d8a728212a.tar.gz' 'https://api.github.com/repos/actions/setup-python/tarball/3467d92d48812f2876be76290f77c3d8a728212a'
-curl -s -S -L -o '3467d92d48812f2876be76290f77c3d8a728212a.zip' 'https://api.github.com/repos/actions/setup-python/zipball/3467d92d48812f2876be76290f77c3d8a728212a'
+curl -s -S -L -o '5f2af211d616f86005883b44826180b21abb4060.tar.gz' 'https://api.github.com/repos/actions/setup-python/tarball/5f2af211d616f86005883b44826180b21abb4060'
+curl -s -S -L -o '5f2af211d616f86005883b44826180b21abb4060.zip' 'https://api.github.com/repos/actions/setup-python/zipball/5f2af211d616f86005883b44826180b21abb4060'
 curl -s -S -L -o 'e9aba2c848f5ebd159c070c61ea2c4e2b122355e.tar.gz' 'https://api.github.com/repos/actions/setup-python/tarball/e9aba2c848f5ebd159c070c61ea2c4e2b122355e'
 curl -s -S -L -o 'e9aba2c848f5ebd159c070c61ea2c4e2b122355e.zip' 'https://api.github.com/repos/actions/setup-python/zipball/e9aba2c848f5ebd159c070c61ea2c4e2b122355e'
 curl -s -S -L -o '79a60bc5f81b5089e080e675ad1f542941c1e8c0.tar.gz' 'https://api.github.com/repos/actions/setup-python/tarball/79a60bc5f81b5089e080e675ad1f542941c1e8c0'
