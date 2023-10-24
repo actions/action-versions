@@ -6,7 +6,7 @@
     "+^v[0-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "6e9e44895f11c5489716beba7b3be1cd4d76f8e9"
+    "main": "8f152de45cc393bb48ce5d89d36b731f54556e65"
   },
   "defaultBranch": "main",
   "tags": {
@@ -117,7 +117,7 @@
       "commit": "7c12f8017d5436eb855f1ed4399f037a36fbd9e8"
     },
     "v3": {
-      "commit": "5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d"
+      "commit": "1a4442cacd436585916779262731d5b162bc6ec7"
     },
     "v3.0.0": {
       "commit": "9ced9a43a244f3ac94f13bfd896db8c8f30da67a"
@@ -157,6 +157,15 @@
     },
     "v3.8.1": {
       "commit": "5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d"
+    },
+    "v3.8.2": {
+      "commit": "1a4442cacd436585916779262731d5b162bc6ec7"
+    },
+    "v4": {
+      "commit": "8f152de45cc393bb48ce5d89d36b731f54556e65"
+    },
+    "v4.0.0": {
+      "commit": "8f152de45cc393bb48ce5d89d36b731f54556e65"
     }
   }
 }
