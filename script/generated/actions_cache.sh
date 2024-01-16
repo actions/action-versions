@@ -1,9 +1,9 @@
 mkdir actions_cache
 pushd actions_cache
-curl -s -S -L -o '704facf57e6136b1bc63b828d79edcd491f0ee84.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/704facf57e6136b1bc63b828d79edcd491f0ee84'
-curl -s -S -L -o '704facf57e6136b1bc63b828d79edcd491f0ee84.zip' 'https://api.github.com/repos/actions/cache/zipball/704facf57e6136b1bc63b828d79edcd491f0ee84'
-curl -s -S -L -o '052d3a99864b25538f4f499e375578f64851952e.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/052d3a99864b25538f4f499e375578f64851952e'
-curl -s -S -L -o '052d3a99864b25538f4f499e375578f64851952e.zip' 'https://api.github.com/repos/actions/cache/zipball/052d3a99864b25538f4f499e375578f64851952e'
+curl -s -S -L -o 'e12d46a63a90f2fae62d114769bbf2a179198b5c.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/e12d46a63a90f2fae62d114769bbf2a179198b5c'
+curl -s -S -L -o 'e12d46a63a90f2fae62d114769bbf2a179198b5c.zip' 'https://api.github.com/repos/actions/cache/zipball/e12d46a63a90f2fae62d114769bbf2a179198b5c'
+curl -s -S -L -o '734d9cb93d6f7610c2400b0f789eaa6f9813e271.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/734d9cb93d6f7610c2400b0f789eaa6f9813e271'
+curl -s -S -L -o '734d9cb93d6f7610c2400b0f789eaa6f9813e271.zip' 'https://api.github.com/repos/actions/cache/zipball/734d9cb93d6f7610c2400b0f789eaa6f9813e271'
 curl -s -S -L -o '4b0cf6cc4619e737324ddfcec08fff2413359514.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/4b0cf6cc4619e737324ddfcec08fff2413359514'
 curl -s -S -L -o '4b0cf6cc4619e737324ddfcec08fff2413359514.zip' 'https://api.github.com/repos/actions/cache/zipball/4b0cf6cc4619e737324ddfcec08fff2413359514'
 curl -s -S -L -o '136d96b4aee02b1f0de3ba493b1d47135042d9c0.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/136d96b4aee02b1f0de3ba493b1d47135042d9c0'
@@ -48,4 +48,6 @@ curl -s -S -L -o '88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8.tar.gz' 'https://api.
 curl -s -S -L -o '88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8.zip' 'https://api.github.com/repos/actions/cache/zipball/88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8'
 curl -s -S -L -o '704facf57e6136b1bc63b828d79edcd491f0ee84.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/704facf57e6136b1bc63b828d79edcd491f0ee84'
 curl -s -S -L -o '704facf57e6136b1bc63b828d79edcd491f0ee84.zip' 'https://api.github.com/repos/actions/cache/zipball/704facf57e6136b1bc63b828d79edcd491f0ee84'
+curl -s -S -L -o 'e12d46a63a90f2fae62d114769bbf2a179198b5c.tar.gz' 'https://api.github.com/repos/actions/cache/tarball/e12d46a63a90f2fae62d114769bbf2a179198b5c'
+curl -s -S -L -o 'e12d46a63a90f2fae62d114769bbf2a179198b5c.zip' 'https://api.github.com/repos/actions/cache/zipball/e12d46a63a90f2fae62d114769bbf2a179198b5c'
 popd
