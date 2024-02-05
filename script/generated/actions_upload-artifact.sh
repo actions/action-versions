@@ -1,7 +1,7 @@
 mkdir actions_upload-artifact
 pushd actions_upload-artifact
-curl -s -S -L -o '26f96dfa697d77e81fd5907df203aa23a56210a8.tar.gz' 'https://api.github.com/repos/actions/upload-artifact/tarball/26f96dfa697d77e81fd5907df203aa23a56210a8'
-curl -s -S -L -o '26f96dfa697d77e81fd5907df203aa23a56210a8.zip' 'https://api.github.com/repos/actions/upload-artifact/zipball/26f96dfa697d77e81fd5907df203aa23a56210a8'
+curl -s -S -L -o '3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a.tar.gz' 'https://api.github.com/repos/actions/upload-artifact/tarball/3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a'
+curl -s -S -L -o '3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a.zip' 'https://api.github.com/repos/actions/upload-artifact/zipball/3a8048248f2f288c271830f8ecf2a1c5d8eb0e9a'
 curl -s -S -L -o '34622df80861c3ed63eb2bff892de2f1fbf4c9da.tar.gz' 'https://api.github.com/repos/actions/upload-artifact/tarball/34622df80861c3ed63eb2bff892de2f1fbf4c9da'
 curl -s -S -L -o '34622df80861c3ed63eb2bff892de2f1fbf4c9da.zip' 'https://api.github.com/repos/actions/upload-artifact/zipball/34622df80861c3ed63eb2bff892de2f1fbf4c9da'
 curl -s -S -L -o '631c3ac5d8cc76468d617056d13b8b27e16b2f92.tar.gz' 'https://api.github.com/repos/actions/upload-artifact/tarball/631c3ac5d8cc76468d617056d13b8b27e16b2f92'
