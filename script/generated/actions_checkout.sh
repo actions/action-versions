@@ -1,7 +1,7 @@
 mkdir actions_checkout
 pushd actions_checkout
-curl -s -S -L -o 'cd7d8d697e10461458bc61a30d094dc601a8b017.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/cd7d8d697e10461458bc61a30d094dc601a8b017'
-curl -s -S -L -o 'cd7d8d697e10461458bc61a30d094dc601a8b017.zip' 'https://api.github.com/repos/actions/checkout/zipball/cd7d8d697e10461458bc61a30d094dc601a8b017'
+curl -s -S -L -o '1d96c772d19495a3b5c517cd2bc0cb401ea0529f.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/1d96c772d19495a3b5c517cd2bc0cb401ea0529f'
+curl -s -S -L -o '1d96c772d19495a3b5c517cd2bc0cb401ea0529f.zip' 'https://api.github.com/repos/actions/checkout/zipball/1d96c772d19495a3b5c517cd2bc0cb401ea0529f'
 curl -s -S -L -o '544eadc6bf3d226fd7a7a9f0dc5b5bf7ca0675b9.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/544eadc6bf3d226fd7a7a9f0dc5b5bf7ca0675b9'
 curl -s -S -L -o '544eadc6bf3d226fd7a7a9f0dc5b5bf7ca0675b9.zip' 'https://api.github.com/repos/actions/checkout/zipball/544eadc6bf3d226fd7a7a9f0dc5b5bf7ca0675b9'
 curl -s -S -L -o 'af513c7a016048ae468971c52ed77d9562c7c819.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/af513c7a016048ae468971c52ed77d9562c7c819'
@@ -80,4 +80,6 @@ curl -s -S -L -o 'b4ffde65f46336ab88eb53be808477a3936bae11.tar.gz' 'https://api.
 curl -s -S -L -o 'b4ffde65f46336ab88eb53be808477a3936bae11.zip' 'https://api.github.com/repos/actions/checkout/zipball/b4ffde65f46336ab88eb53be808477a3936bae11'
 curl -s -S -L -o '9bb56186c3b09b4f86b1c65136769dd318469633.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/9bb56186c3b09b4f86b1c65136769dd318469633'
 curl -s -S -L -o '9bb56186c3b09b4f86b1c65136769dd318469633.zip' 'https://api.github.com/repos/actions/checkout/zipball/9bb56186c3b09b4f86b1c65136769dd318469633'
+curl -s -S -L -o '1d96c772d19495a3b5c517cd2bc0cb401ea0529f.tar.gz' 'https://api.github.com/repos/actions/checkout/tarball/1d96c772d19495a3b5c517cd2bc0cb401ea0529f'
+curl -s -S -L -o '1d96c772d19495a3b5c517cd2bc0cb401ea0529f.zip' 'https://api.github.com/repos/actions/checkout/zipball/1d96c772d19495a3b5c517cd2bc0cb401ea0529f'
 popd
