@@ -15,6 +15,10 @@ Preview versions are intentionally excluded. For example: `v2-beta`
 
 Optional args may be supplied to control which refs are included. See `script/add-action.sh --help` for more info.
 
+### How to use this in the self-hosted runner?
+
+Please read the doc @kenmuse has put together at: https://www.kenmuse.com/blog/building-github-actions-runner-images-with-an-action-archive-cache/
+
 ## License 
 
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](./LICENSE.txt) for the full terms.
