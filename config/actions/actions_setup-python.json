@@ -7,7 +7,7 @@
     "-^v1(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "0b93645e9fea7318ecaed2b359559ac225c90a2b"
+    "main": "55aad42e4674b58b2b2fb7d8e7552402d922b4e7"
   },
   "defaultBranch": "main",
   "tags": {
