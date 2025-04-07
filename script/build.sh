@@ -32,8 +32,9 @@ url_prefix='https://github.com/'
 # Create each repo
 pushd "$layout_dir"
 for action_script in $script_dir/generated/*.sh; do
-  . $action_script
+  . $action_script &
 done
+wait
 popd
 
 # List the repositories
