@@ -40,15 +40,14 @@ for json_file in $script_dir/../../config/actions/*.json; do
     curl_download_commands+=("curl -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha'")
   done
 
-  # Get an array of tag info. Each item contains "<tag> <tag_or_commit_sha> <commit_sha>"
+  # Get an array of tag info. Each item contains "<tag> <commit_sha>"
   tag_info=()
-  IFS=$'\n' read -r -d '' -a tag_info < <( echo "$json" | jq --raw-output '.tags | to_entries | .[] | .key + " " + if .value.tag? then .value.tag else .value.commit end + " " + .value.commit' && printf '\0' )
+  IFS=$'\n' read -r -d '' -a tag_info < <( echo "$json" | jq --raw-output '.tags | to_entries | .[] | .key + " " + .value.commit' && printf '\0' )
 
   for item in "${tag_info[@]}"; do
     split=( $(echo $item) )
     tag="${split[0]}"
     sha="${split[1]}"
-    commit="${split[2]}"
 
     # Append curl download command
     curl_download_commands+=("curl -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha'")
