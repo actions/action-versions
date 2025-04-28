@@ -7,7 +7,7 @@
     "-^v1(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "e348410e00f449ece8581cb8e88be8f0e7712da6"
+    "main": "a26af69be951a213d495a4c3e4e4022e16d87065"
   },
   "defaultBranch": "main",
   "tags": {
@@ -86,7 +86,7 @@
       "commit": "3542bca2639a428e1796aaa6a2ffef0c0f575566"
     },
     "v4": {
-      "commit": "3605726ffa6ef7750b99ff496e5b88248b414e26"
+      "commit": "7f4fc3e22c37d6ff65e88745f38bd3157c663f7c"
     },
     "v4.0.0": {
       "commit": "d09bd5e6005b175076f227b13d9730d56e9dcfcb"
@@ -127,8 +127,11 @@
     "v4.9.0": {
       "commit": "3605726ffa6ef7750b99ff496e5b88248b414e26"
     },
+    "v4.9.1": {
+      "commit": "7f4fc3e22c37d6ff65e88745f38bd3157c663f7c"
+    },
     "v5": {
-      "commit": "8d9ed9ac5c53483de85588cdf95a591a75ab9f55"
+      "commit": "a26af69be951a213d495a4c3e4e4022e16d87065"
     },
     "v5.0.0": {
       "commit": "0a5c61591373683505ea898e09a3ea4f39ef2b9c"
@@ -150,6 +153,9 @@
     },
     "v5.5.0": {
       "commit": "8d9ed9ac5c53483de85588cdf95a591a75ab9f55"
+    },
+    "v5.6.0": {
+      "commit": "a26af69be951a213d495a4c3e4e4022e16d87065"
     }
   }
 }
