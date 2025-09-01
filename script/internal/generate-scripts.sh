@@ -59,7 +59,8 @@ for json_file in $script_dir/../../config/actions/*.json; do
   echo "pushd ${owner}_$repo" >> "$script_file"
   for curl_download_command in "${curl_download_commands[@]}"
   do
-    echo "$curl_download_command" >> "$script_file"
+    echo "$curl_download_command &" >> "$script_file"
   done
+  echo "wait" >> "$script_file"
   echo "popd" >> "$script_file"
 done
