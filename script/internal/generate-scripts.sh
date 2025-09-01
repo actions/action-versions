@@ -35,9 +35,9 @@ for json_file in $script_dir/../../config/actions/*.json; do
     branch="${split[0]}"
     sha="${split[1]}"
 
-    # Append curl download command
-    curl_download_commands+=("curl -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha'")
-    curl_download_commands+=("curl -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha'")
+    # Append curl download command with retry and error handling
+    curl_download_commands+=("curl --retry 5 --retry-delay 2 --retry-max-time 60 --fail -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha' &")
+    curl_download_commands+=("curl --retry 5 --retry-delay 2 --retry-max-time 60 --fail -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha' &")
   done
 
   # Get an array of tag info. Each item contains "<tag> <commit_sha>"
@@ -49,9 +49,9 @@ for json_file in $script_dir/../../config/actions/*.json; do
     tag="${split[0]}"
     sha="${split[1]}"
 
-    # Append curl download command
-    curl_download_commands+=("curl -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha'")
-    curl_download_commands+=("curl -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha'")
+    # Append curl download command with retry and error handling
+    curl_download_commands+=("curl --retry 5 --retry-delay 2 --retry-max-time 60 --fail -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha' &")
+    curl_download_commands+=("curl --retry 5 --retry-delay 2 --retry-max-time 60 --fail -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha' &")
   done
 
   # Append curl commands
@@ -59,8 +59,9 @@ for json_file in $script_dir/../../config/actions/*.json; do
   echo "pushd ${owner}_$repo" >> "$script_file"
   for curl_download_command in "${curl_download_commands[@]}"
   do
-    echo "$curl_download_command &" >> "$script_file"
+    echo "$curl_download_command" >> "$script_file"
   done
   echo "wait" >> "$script_file"
+  echo "sleep 1" >> "$script_file"  # Brief pause for process settlement
   echo "popd" >> "$script_file"
 done
