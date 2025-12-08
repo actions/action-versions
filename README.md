@@ -27,7 +27,17 @@ To exclude certain old version tags from being packaged, add an `ignoreTags` arr
 
 This will automatically generate regex patterns that match `v1`, `v1.x`, `v2`, `v2.x`, etc.
 
-**For existing actions**, add `ignoreTags` directly to the JSON config file:
+**For existing actions**, use the helper script to add ignore tags:
+
+```bash
+# Add ignore tags to a specific action
+./script/add-ignore-tags.sh --ignore-tags "v1,v2" actions/checkout
+
+# Add ignore tags to all existing actions
+./script/add-ignore-tags.sh --ignore-tags "v1,v2" --all
+```
+
+Or add `ignoreTags` directly to the JSON config file:
 
 ```json
 {
@@ -36,8 +46,7 @@ This will automatically generate regex patterns that match `v1`, `v1.x`, `v2`, `
   "ignoreTags": [
     "^v1(\\..*)?$",
     "^v2(\\..*)?$"
-  ],
-  ...
+  ]
 }
 ```
 
