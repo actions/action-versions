@@ -19,7 +19,13 @@ Optional args may be supplied to control which refs are included. See `script/ad
 
 To exclude certain old version tags from being packaged, add an `ignoreTags` array to the action config JSON file. Each entry is a regex pattern that will be tested against tag names.
 
-For example, to exclude all v1 and v2 tags:
+**When adding a new action**, use the `--ignore-tags` option:
+
+```bash
+./script/add-action.sh --ignore-tags "^v1(\\..*)?$,^v2(\\..*)?$" actions/checkout
+```
+
+**For existing actions**, add `ignoreTags` directly to the JSON config file:
 
 ```json
 {
@@ -33,7 +39,7 @@ For example, to exclude all v1 and v2 tags:
 }
 ```
 
-Tags matching any of the patterns will be excluded from the generated scripts while remaining in the config for historical reference.
+Tags matching any of the patterns will be excluded from the generated scripts while remaining in the config for historical reference. The `ignoreTags` field is preserved when running `update-action.sh`.
 
 ### How to use this in the self-hosted runner?
 

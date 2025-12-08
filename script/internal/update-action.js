@@ -22,8 +22,9 @@ async function main() {
       const repo = config.repo
       const patterns = config.patterns
       const defaultBranch = config.defaultBranch
+      const ignoreTags = config.ignoreTags
       assert.ok(patterns && patterns.length, 'Existing patterns must not be empty')
-      await actionConfig.add(owner, repo, patterns, defaultBranch)
+      await actionConfig.add(owner, repo, patterns, defaultBranch, ignoreTags)
     }
   }
   catch (err) {

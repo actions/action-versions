@@ -27,6 +27,12 @@ class ActionConfig {
   patterns = []
 
   /**
+   * Tag patterns to ignore during packaging
+   * @type {string[]|undefined}
+   */
+  ignoreTags = undefined
+
+  /**
    * Branch versions (ref to commit SHA)
    * @type {{[ref: string]: string}}
    */
@@ -66,9 +72,10 @@ exports.TagVersion = TagVersion
  * @param {string} repos
  * @param {string[]} patternStrings
  * @param {string} defaultBranch
+ * @param {string[]|undefined} ignoreTags
  * @returns {Promise}
  */
-async function add(owner, repo, patternStrings, defaultBranch) {
+async function add(owner, repo, patternStrings, defaultBranch, ignoreTags) {
   assert.ok(owner, "Arg 'owner' must not be empty")
   assert.ok(repo, "Arg 'repo' must not be empty")
   assert.ok(patternStrings, "Arg 'patternStrings' must not be null")
@@ -84,6 +91,9 @@ async function add(owner, repo, patternStrings, defaultBranch) {
   config.owner = owner
   config.repo = repo
   config.patterns = patternStrings
+  if (ignoreTags && ignoreTags.length > 0) {
+    config.ignoreTags = ignoreTags
+  }
   config.defaultBranch = defaultBranch
 
   const tempDir = path.join(paths.temp, `${owner}_${repo}`)
