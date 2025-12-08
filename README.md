@@ -19,11 +19,13 @@ Optional args may be supplied to control which refs are included. See `script/ad
 
 To exclude certain old version tags from being packaged, add an `ignoreTags` array to the action config JSON file. Each entry is a regex pattern that will be tested against tag names.
 
-**When adding a new action**, use the `--ignore-tags` option:
+**When adding a new action**, use the `--ignore-tags` option with simple version prefixes:
 
 ```bash
-./script/add-action.sh --ignore-tags "^v1(\\..*)?$,^v2(\\..*)?$" actions/checkout
+./script/add-action.sh --ignore-tags "v1,v2" actions/checkout
 ```
+
+This will automatically generate regex patterns that match `v1`, `v1.x`, `v2`, `v2.x`, etc.
 
 **For existing actions**, add `ignoreTags` directly to the JSON config file:
 
