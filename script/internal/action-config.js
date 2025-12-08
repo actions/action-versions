@@ -69,7 +69,7 @@ exports.TagVersion = TagVersion
 /**
  * Adds a new action config file
  * @param {string} owner
- * @param {string} repos
+ * @param {string} repo
  * @param {string[]} patternStrings
  * @param {string} defaultBranch
  * @param {string[]|undefined} ignoreTags

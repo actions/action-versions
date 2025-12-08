@@ -87,6 +87,15 @@ function getArgs() {
   let ignoreTags = []
   if (parsedArgs.options['ignore-tags']) {
     ignoreTags = parsedArgs.options['ignore-tags'].split(',').map(t => t.trim()).filter(t => t)
+    // Validate ignore-tags patterns are valid regex
+    for (const ignorePattern of ignoreTags) {
+      try {
+        new RegExp(ignorePattern)
+      }
+      catch (err) {
+        argHelper.throwError(`Invalid ignore-tags pattern '${ignorePattern}': ${err.message}`)
+      }
+    }
   }
 
   return {
