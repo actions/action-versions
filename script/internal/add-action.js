@@ -14,6 +14,7 @@ async function main() {
     const repo = args.repo
     const patterns = args.patterns
     const defaultBranch = args.defaultBranch || 'master'
+    const ignoreTags = args.ignoreTags
 
     // File exists?
     const file = actionConfig.getFilePath(owner, repo)
@@ -23,7 +24,7 @@ async function main() {
     await fsHelper.reinitTemp()
 
     // Add the config
-    await actionConfig.add(owner, repo, patterns, defaultBranch)
+    await actionConfig.add(owner, repo, patterns, defaultBranch, ignoreTags)
   }
   catch (err) {
     // Help
@@ -50,6 +51,7 @@ class Args {
   repo = ''
   patterns = []
   defaultBranch = ''
+  ignoreTags = []
 }
 
 /**
@@ -58,7 +60,7 @@ class Args {
  */
 function getArgs() {
   // Parse
-  const parsedArgs = argHelper.parse([], ['default-branch'])
+  const parsedArgs = argHelper.parse([], ['default-branch', 'ignore-tags'])
   if (parsedArgs.arguments.length < 1) {
     argHelper.throwError('Expected at least one arg')
   }
@@ -81,17 +83,32 @@ function getArgs() {
     }
   }
 
+  // Parse ignore-tags (comma-separated version prefixes like v1,v2)
+  // These are converted to regex patterns that match the version and all its sub-versions
+  let ignoreTags = []
+  if (parsedArgs.options['ignore-tags']) {
+    const prefixes = parsedArgs.options['ignore-tags'].split(',').map(t => t.trim()).filter(t => t)
+    for (const prefix of prefixes) {
+      // Convert simple version prefix like "v1" to regex pattern "^v1(\\..*)?$"
+      // This matches "v1", "v1.0", "v1.0.0", etc.
+      const escapedPrefix = prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+      ignoreTags.push(`^${escapedPrefix}(\\..*)?$`)
+    }
+  }
+
   return {
     owner: splitNwo[0],
     repo: splitNwo[1],
     patterns: patterns,
-    defaultBranch: parsedArgs.options['default-branch']
+    defaultBranch: parsedArgs.options['default-branch'],
+    ignoreTags: ignoreTags
   }
 }
 
 function printUsage() {
-  console.error('USAGE: add-action.sh [--default-branch branch] nwo [(+|-)regexp [...]]')
+  console.error('USAGE: add-action.sh [--default-branch branch] [--ignore-tags versions] nwo [(+|-)regexp [...]]')
   console.error(`  --default-branch  Default branch name. For example: master`)
+  console.error(`  --ignore-tags     Comma-separated version prefixes to ignore. For example: v1,v2`)
   console.error(`  nwo               Name with owner. For example: actions/checkout`)
   console.error(`  regexp            Refs to include or exclude. Default: ${actionConfig.defaultPatterns.join(' ')}`)
 }

@@ -40,6 +40,10 @@ for json_file in $script_dir/../../config/actions/*.json; do
     curl_download_commands+=("curl -s -S -L -o '$sha.zip' 'https://api.github.com/repos/$owner/$repo/zipball/$sha'")
   done
 
+  # Get an array of ignoreTags patterns (if present)
+  ignore_patterns=()
+  IFS=$'\n' read -r -d '' -a ignore_patterns < <( echo "$json" | jq --raw-output '.ignoreTags // [] | .[]' && printf '\0' )
+
   # Get an array of tag info. Each item contains "<tag> <commit_sha>"
   tag_info=()
   IFS=$'\n' read -r -d '' -a tag_info < <( echo "$json" | jq --raw-output '.tags | to_entries | .[] | .key + " " + .value.commit' && printf '\0' )
@@ -48,6 +52,20 @@ for json_file in $script_dir/../../config/actions/*.json; do
     split=( $(echo $item) )
     tag="${split[0]}"
     sha="${split[1]}"
+
+    # Check if the tag matches any ignore pattern
+    skip_tag=false
+    for pattern in "${ignore_patterns[@]}"; do
+      if [[ "$tag" =~ $pattern ]]; then
+        echo "Ignoring tag '$tag' (matches pattern '$pattern')"
+        skip_tag=true
+        break
+      fi
+    done
+
+    if [ "$skip_tag" = true ]; then
+      continue
+    fi
 
     # Append curl download command
     curl_download_commands+=("curl -s -S -L -o '$sha.tar.gz' 'https://api.github.com/repos/$owner/$repo/tarball/$sha'")
