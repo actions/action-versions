@@ -3,79 +3,13 @@
   "repo": "checkout",
   "patterns": [
     "+^main$",
-    "+^v[0-9]+(\\.[0-9]+){0,2}$"
+    "+^v[3-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
     "main": "8e8c483db84b4bee98b60c0593521ed34d9990e8"
   },
   "defaultBranch": "main",
   "tags": {
-    "v1": {
-      "commit": "50fbc622fc4ef5163becd7fab6573eac35f8462e",
-      "tag": "544eadc6bf3d226fd7a7a9f0dc5b5bf7ca0675b9"
-    },
-    "v1.0.0": {
-      "commit": "af513c7a016048ae468971c52ed77d9562c7c819"
-    },
-    "v1.1.0": {
-      "commit": "0b496e91ec7ae4428c3ed2eeb4c3a40df431f2cc",
-      "tag": "ec3afacf7f605c9fc12c70bc1c9e1708ddb99eca"
-    },
-    "v1.2.0": {
-      "commit": "50fbc622fc4ef5163becd7fab6573eac35f8462e",
-      "tag": "a2ca40438991a1ab62db1b7cad0fd4e36a2ac254"
-    },
-    "v2": {
-      "commit": "ee0669bd1cc54295c223e0bb666b733df41de1c5"
-    },
-    "v2.0.0": {
-      "commit": "722adc63f1aa60a57ec37892e133b1d319cae598"
-    },
-    "v2.1.0": {
-      "commit": "01aecccf739ca6ff86c0539fbc67a7a5007bbc81"
-    },
-    "v2.1.1": {
-      "commit": "86f86b36ef15e6570752e7175f451a512eac206b"
-    },
-    "v2.2.0": {
-      "commit": "aabbfeb2ce60b5bd82389903509092c4648a9713"
-    },
-    "v2.3.0": {
-      "commit": "b4483adec309c0d01a5435c5e24eb40de5773ad9"
-    },
-    "v2.3.1": {
-      "commit": "28c7f3d2b5162b5ddd3dfd9a45aa55eaf396478b"
-    },
-    "v2.3.2": {
-      "commit": "2036a08e25fa78bbd946711a407b529a0a1204bf"
-    },
-    "v2.3.3": {
-      "commit": "a81bbbf8298c0fa03ea29cdc473d45769f953675"
-    },
-    "v2.3.4": {
-      "commit": "5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f"
-    },
-    "v2.3.5": {
-      "commit": "1e204e9a9253d643386038d443f96446fa156a97"
-    },
-    "v2.4.0": {
-      "commit": "ec3a7ce113134d7a93b817d10a8272cb61118579"
-    },
-    "v2.4.1": {
-      "commit": "f25a3a9f25bd5f4c5d77189cab02ff357b5aedeb"
-    },
-    "v2.4.2": {
-      "commit": "7884fcad6b5d53d10323aee724dc68d8b9096a2e"
-    },
-    "v2.5.0": {
-      "commit": "e2f20e631ae6d7dd3b768f56a5d2af784dd54791"
-    },
-    "v2.6.0": {
-      "commit": "dc323e67f16fb5f7663d20ff7941f27f5809e9b6"
-    },
-    "v2.7.0": {
-      "commit": "ee0669bd1cc54295c223e0bb666b733df41de1c5"
-    },
     "v3": {
       "commit": "f43a0e5ff2bd294095638e18286ca9a3d1956744"
     },
