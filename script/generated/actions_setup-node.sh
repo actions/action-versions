@@ -1,7 +1,7 @@
 mkdir actions_setup-node
 pushd actions_setup-node
-curl -s -S -L -o '65d868f8d4d85d7d4abb7de0875cde3fcc8798f5.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/65d868f8d4d85d7d4abb7de0875cde3fcc8798f5'
-curl -s -S -L -o '65d868f8d4d85d7d4abb7de0875cde3fcc8798f5.zip' 'https://api.github.com/repos/actions/setup-node/zipball/65d868f8d4d85d7d4abb7de0875cde3fcc8798f5'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/6044e13b5dc448c55e2357c09f80417699197238'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.zip' 'https://api.github.com/repos/actions/setup-node/zipball/6044e13b5dc448c55e2357c09f80417699197238'
 curl -s -S -L -o '3235b876344d2a9aa001b8d1453c930bba69e610.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/3235b876344d2a9aa001b8d1453c930bba69e610'
 curl -s -S -L -o '3235b876344d2a9aa001b8d1453c930bba69e610.zip' 'https://api.github.com/repos/actions/setup-node/zipball/3235b876344d2a9aa001b8d1453c930bba69e610'
 curl -s -S -L -o '9ced9a43a244f3ac94f13bfd896db8c8f30da67a.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/9ced9a43a244f3ac94f13bfd896db8c8f30da67a'
@@ -60,10 +60,12 @@ curl -s -S -L -o 'a0853c24544627f65ddf259abe73b1d18a591444.tar.gz' 'https://api.
 curl -s -S -L -o 'a0853c24544627f65ddf259abe73b1d18a591444.zip' 'https://api.github.com/repos/actions/setup-node/zipball/a0853c24544627f65ddf259abe73b1d18a591444'
 curl -s -S -L -o 'a0853c24544627f65ddf259abe73b1d18a591444.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/a0853c24544627f65ddf259abe73b1d18a591444'
 curl -s -S -L -o 'a0853c24544627f65ddf259abe73b1d18a591444.zip' 'https://api.github.com/repos/actions/setup-node/zipball/a0853c24544627f65ddf259abe73b1d18a591444'
-curl -s -S -L -o '395ad3262231945c25e8478fd5baf05154b1d79f.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/395ad3262231945c25e8478fd5baf05154b1d79f'
-curl -s -S -L -o '395ad3262231945c25e8478fd5baf05154b1d79f.zip' 'https://api.github.com/repos/actions/setup-node/zipball/395ad3262231945c25e8478fd5baf05154b1d79f'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/6044e13b5dc448c55e2357c09f80417699197238'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.zip' 'https://api.github.com/repos/actions/setup-node/zipball/6044e13b5dc448c55e2357c09f80417699197238'
 curl -s -S -L -o '2028fbc5c25fe9cf00d9f06a71cc4710d4507903.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/2028fbc5c25fe9cf00d9f06a71cc4710d4507903'
 curl -s -S -L -o '2028fbc5c25fe9cf00d9f06a71cc4710d4507903.zip' 'https://api.github.com/repos/actions/setup-node/zipball/2028fbc5c25fe9cf00d9f06a71cc4710d4507903'
 curl -s -S -L -o '395ad3262231945c25e8478fd5baf05154b1d79f.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/395ad3262231945c25e8478fd5baf05154b1d79f'
 curl -s -S -L -o '395ad3262231945c25e8478fd5baf05154b1d79f.zip' 'https://api.github.com/repos/actions/setup-node/zipball/395ad3262231945c25e8478fd5baf05154b1d79f'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.tar.gz' 'https://api.github.com/repos/actions/setup-node/tarball/6044e13b5dc448c55e2357c09f80417699197238'
+curl -s -S -L -o '6044e13b5dc448c55e2357c09f80417699197238.zip' 'https://api.github.com/repos/actions/setup-node/zipball/6044e13b5dc448c55e2357c09f80417699197238'
 popd
