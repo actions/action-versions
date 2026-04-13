@@ -44,6 +44,15 @@ for json_file in $script_dir/../../config/actions/*.json; do
   ignore_patterns=()
   IFS=$'\n' read -r -d '' -a ignore_patterns < <( echo "$json" | jq --raw-output '.ignoreTags // [] | .[]' && printf '\0' )
 
+  # Get version-filtered tags (applies latestMajorVersions and latestVersionsPerMajor)
+  filtered_tags=()
+  IFS=$'\n' read -r -d '' -a filtered_tags < <( echo "$json" | node "$script_dir/filter-tags.js" && printf '\0' )
+  unset filtered_tag_set
+  declare -A filtered_tag_set
+  for t in "${filtered_tags[@]}"; do
+    filtered_tag_set[$t]=1
+  done
+
   # Get an array of tag info. Each item contains "<tag> <commit_sha>"
   tag_info=()
   IFS=$'\n' read -r -d '' -a tag_info < <( echo "$json" | jq --raw-output '.tags | to_entries | .[] | .key + " " + .value.commit' && printf '\0' )
@@ -64,6 +73,12 @@ for json_file in $script_dir/../../config/actions/*.json; do
     done
 
     if [ "$skip_tag" = true ]; then
+      continue
+    fi
+
+    # Check if the tag passes version filter
+    if [ -z "${filtered_tag_set[$tag]+x}" ]; then
+      echo "Skipping tag '$tag' (filtered by version limits)"
       continue
     fi
 

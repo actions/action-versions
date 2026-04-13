@@ -46,6 +46,8 @@ function test_tar_gz ()
         echo "Find action.yml under $sha_archive_full_path"
       elif [[ -f "$first_dir/action.yaml" ]]; then
         echo "Find action.yaml under $sha_archive_full_path"
+      elif find "$first_dir" -name 'action.yml' -o -name 'action.yaml' | grep -q .; then
+        echo "Find action.yml in subdirectory under $sha_archive_full_path"
       else
         echo "$sha_archive_full_path doesn't contain an action.yml or action.yaml"
         exit 1
@@ -83,6 +85,8 @@ function test_zip ()
         echo "Find action.yml under $sha_archive_full_path"
       elif [[ -f "$first_dir/action.yaml" ]]; then
         echo "Find action.yaml under $sha_archive_full_path"
+      elif find "$first_dir" -name 'action.yml' -o -name 'action.yaml' | grep -q .; then
+        echo "Find action.yml in subdirectory under $sha_archive_full_path"
       else
         echo "$sha_archive_full_path doesn't contain an action.yml or action.yaml"
         exit 1
