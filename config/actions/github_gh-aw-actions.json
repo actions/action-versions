@@ -1,0 +1,26 @@
+{
+  "owner": "github",
+  "repo": "gh-aw-actions",
+  "patterns": [
+    "+^master$",
+    "+^v[0-9]+(\\.[0-9]+){0,2}$"
+  ],
+  "branches": {},
+  "defaultBranch": "master",
+  "latestMajorVersions": 1,
+  "latestVersionsPerMajor": 3,
+  "tags": {
+    "v0.67.4": {
+      "commit": "2b3c275b3652caa01c2ebe31cbab50ec2df0f927",
+      "tag": "9d6ae06250fc0ec536a0e5f35de313b35bad7246"
+    },
+    "v0.68.0": {
+      "commit": "6715c81fe97e4bcbfa0734c3422491672ebda34f",
+      "tag": "0acfb4a691fe207cd8bc982ea5cb9d750d57a702"
+    },
+    "v0.68.1": {
+      "commit": "ea222e359276c0702a5f5203547ff9d88d0ddd76",
+      "tag": "2fe53acc038ba01c3bbdc767d4b25df31ca5bdfc"
+    }
+  }
+}

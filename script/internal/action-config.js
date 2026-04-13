@@ -45,6 +45,18 @@ class ActionConfig {
   defaultBranch = 'master'
 
   /**
+   * Maximum number of latest major versions to include (default to unlimited)
+   * @type {number|undefined}
+   */
+  latestMajorVersions = undefined
+
+  /**
+   * Maximum number of latest version tags per major version (default to unlimited)
+   * @type {number|undefined}
+   */
+  latestVersionsPerMajor = undefined
+
+  /**
    * Tag versions
    * @type {{[ref: string]: TagVersion}}
    */
@@ -73,9 +85,11 @@ exports.TagVersion = TagVersion
  * @param {string[]} patternStrings
  * @param {string} defaultBranch
  * @param {string[]|undefined} ignoreTags
+ * @param {number|undefined} latestMajorVersions
+ * @param {number|undefined} latestVersionsPerMajor
  * @returns {Promise}
  */
-async function add(owner, repo, patternStrings, defaultBranch, ignoreTags) {
+async function add(owner, repo, patternStrings, defaultBranch, ignoreTags, latestMajorVersions, latestVersionsPerMajor) {
   assert.ok(owner, "Arg 'owner' must not be empty")
   assert.ok(repo, "Arg 'repo' must not be empty")
   assert.ok(patternStrings, "Arg 'patternStrings' must not be null")
@@ -93,6 +107,12 @@ async function add(owner, repo, patternStrings, defaultBranch, ignoreTags) {
   config.patterns = patternStrings
   if (ignoreTags && ignoreTags.length > 0) {
     config.ignoreTags = ignoreTags
+  }
+  if (latestMajorVersions && latestMajorVersions > 0) {
+    config.latestMajorVersions = latestMajorVersions
+  }
+  if (latestVersionsPerMajor && latestVersionsPerMajor > 0) {
+    config.latestVersionsPerMajor = latestVersionsPerMajor
   }
   config.defaultBranch = defaultBranch
 
@@ -130,6 +150,9 @@ async function add(owner, repo, patternStrings, defaultBranch, ignoreTags) {
       config.tags[tag] = tagVersion
     }
 
+    // Prune old tags based on version limits
+    pruneOldTags(config)
+
     // Write config
     await exec.exec('mkdir', ['-p', path.dirname(file)])
     await fs.promises.writeFile(file, JSON.stringify(config, null, '  '))
@@ -140,6 +163,75 @@ async function add(owner, repo, patternStrings, defaultBranch, ignoreTags) {
   }
 }
 exports.add = add
+
+/**
+ * Prunes old tags from the config based on latestMajorVersions and latestVersionsPerMajor.
+ * Modifies config.tags in place.
+ * @param {ActionConfig} config
+ */
+function pruneOldTags(config) {
+  const maxMajors = config.latestMajorVersions || 0
+  const maxPerMajor = config.latestVersionsPerMajor || 0
+
+  if (!maxMajors && !maxPerMajor) {
+    return
+  }
+
+  const tagNames = Object.keys(config.tags)
+  const versionTags = []
+  const keepTags = new Set()
+
+  for (const tag of tagNames) {
+    const match = tag.match(/^v(\d+)(?:\.(\d+))?(?:\.(\d+))?$/)
+    if (!match) {
+      // Always keep non-version tags
+      keepTags.add(tag)
+      continue
+    }
+
+    const major = parseInt(match[1], 10)
+    const minor = match[2] !== undefined ? parseInt(match[2], 10) : -1
+    const patch = match[3] !== undefined ? parseInt(match[3], 10) : -1
+    versionTags.push({ tag, major, minor, patch, isMajorOnly: minor === -1 })
+  }
+
+  // Distinct major versions sorted descending (newest first)
+  const majorVersions = [...new Set(versionTags.map(v => v.major))].sort((a, b) => b - a)
+  const allowedMajors = new Set(
+    maxMajors > 0 ? majorVersions.slice(0, maxMajors) : majorVersions
+  )
+
+  for (const major of allowedMajors) {
+    const tagsForMajor = versionTags.filter(v => v.major === major)
+
+    // Always keep major-only pointers (e.g. "v4")
+    for (const v of tagsForMajor.filter(v => v.isMajorOnly)) {
+      keepTags.add(v.tag)
+    }
+
+    // Sort non-major-only tags by version descending (latest first)
+    const sorted = tagsForMajor
+      .filter(v => !v.isMajorOnly)
+      .sort((a, b) => {
+        if (a.minor !== b.minor) return b.minor - a.minor
+        return b.patch - a.patch
+      })
+
+    const kept = maxPerMajor > 0 ? sorted.slice(0, maxPerMajor) : sorted
+    for (const v of kept) {
+      keepTags.add(v.tag)
+    }
+  }
+
+  // Remove pruned tags
+  for (const tag of tagNames) {
+    if (!keepTags.has(tag)) {
+      console.log(`Pruning tag '${tag}' from config (version limit)`)
+      delete config.tags[tag]
+    }
+  }
+}
+exports.pruneOldTags = pruneOldTags
 
 /**
  * Returns the action config file path

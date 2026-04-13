@@ -15,6 +15,8 @@ async function main() {
     const patterns = args.patterns
     const defaultBranch = args.defaultBranch || 'master'
     const ignoreTags = args.ignoreTags
+    const latestMajorVersions = args.latestMajorVersions
+    const latestVersionsPerMajor = args.latestVersionsPerMajor
 
     // File exists?
     const file = actionConfig.getFilePath(owner, repo)
@@ -24,7 +26,7 @@ async function main() {
     await fsHelper.reinitTemp()
 
     // Add the config
-    await actionConfig.add(owner, repo, patterns, defaultBranch, ignoreTags)
+    await actionConfig.add(owner, repo, patterns, defaultBranch, ignoreTags, latestMajorVersions, latestVersionsPerMajor)
   }
   catch (err) {
     // Help
@@ -60,7 +62,7 @@ class Args {
  */
 function getArgs() {
   // Parse
-  const parsedArgs = argHelper.parse([], ['default-branch', 'ignore-tags'])
+  const parsedArgs = argHelper.parse([], ['default-branch', 'ignore-tags', 'latest-major-versions', 'latest-versions-per-major'])
   if (parsedArgs.arguments.length < 1) {
     argHelper.throwError('Expected at least one arg')
   }
@@ -101,16 +103,29 @@ function getArgs() {
     repo: splitNwo[1],
     patterns: patterns,
     defaultBranch: parsedArgs.options['default-branch'],
-    ignoreTags: ignoreTags
+    ignoreTags: ignoreTags,
+    latestMajorVersions: parseNonNegativeInt(parsedArgs.options['latest-major-versions'], 'latest-major-versions'),
+    latestVersionsPerMajor: parseNonNegativeInt(parsedArgs.options['latest-versions-per-major'], 'latest-versions-per-major')
   }
 }
 
+function parseNonNegativeInt(value, name) {
+  if (!value) return 0
+  const n = Number(value)
+  if (!Number.isInteger(n) || n < 0) {
+    argHelper.throwError(`--${name} must be a non-negative integer, got '${value}'`)
+  }
+  return n
+}
+
 function printUsage() {
-  console.error('USAGE: add-action.sh [--default-branch branch] [--ignore-tags versions] nwo [(+|-)regexp [...]]')
-  console.error(`  --default-branch  Default branch name. For example: master`)
-  console.error(`  --ignore-tags     Comma-separated version prefixes to ignore. For example: v1,v2`)
-  console.error(`  nwo               Name with owner. For example: actions/checkout`)
-  console.error(`  regexp            Refs to include or exclude. Default: ${actionConfig.defaultPatterns.join(' ')}`)
+  console.error('USAGE: add-action.sh [--default-branch branch] [--ignore-tags versions] [--latest-major-versions N] [--latest-versions-per-major N] nwo [(+|-)regexp [...]]')
+  console.error(`  --default-branch            Default branch name. For example: master`)
+  console.error(`  --ignore-tags               Comma-separated version prefixes to ignore. For example: v1,v2`)
+  console.error(`  --latest-major-versions     Only cache the latest N major versions. For example: 3`)
+  console.error(`  --latest-versions-per-major Only cache the latest N version tags per major version. For example: 5`)
+  console.error(`  nwo                         Name with owner. For example: actions/checkout`)
+  console.error(`  regexp                      Refs to include or exclude. Default: ${actionConfig.defaultPatterns.join(' ')}`)
 }
 
 main()
