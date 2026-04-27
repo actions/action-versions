@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Usage: script/test.sh ./_layout/action-versions.[tar.gz|zip]
 #        Verify the archive is well-formed with an action.[yaml|yml]
