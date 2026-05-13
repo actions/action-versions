@@ -2,7 +2,7 @@
   "owner": "github",
   "repo": "codeql-action",
   "patterns": [
-    "+^master$",
+    "+^main$",
     "+^v[4-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {},
