@@ -5,22 +5,24 @@
     "+^main$",
     "+^v[4-9]+(\\.[0-9]+){0,2}$"
   ],
-  "branches": {},
+  "branches": {
+    "main": "b71f5aebfc5cee7388c9d7b75e6e36f47787eb9a"
+  },
   "defaultBranch": "main",
   "latestMajorVersions": 1,
   "latestVersionsPerMajor": 2,
   "tags": {
     "v4": {
-      "commit": "68bde559dea0fdcac2102bfdf6230c5f70eb485e",
-      "tag": "5e316336eb4f107009e477d4bfbfff13d7250fae"
-    },
-    "v4.35.3": {
-      "commit": "e46ed2cbd01164d986452f91f178727624ae40d7",
-      "tag": "c3f298df8c1fea2fefe20c785e6aa00f32df8260"
+      "commit": "9e0d7b8d25671d64c341c19c0152d693099fb5ba",
+      "tag": "7c1e4cf0b20d7c1872b26569c00ba908797a59bf"
     },
     "v4.35.4": {
       "commit": "68bde559dea0fdcac2102bfdf6230c5f70eb485e",
       "tag": "3ce22a6e336a7fcc318bc58ae1986395bdc83ba7"
+    },
+    "v4.35.5": {
+      "commit": "9e0d7b8d25671d64c341c19c0152d693099fb5ba",
+      "tag": "f25eda876ebb741d872b63b9f2c6dfdd77f14b83"
     }
   }
 }
