@@ -1,9 +1,9 @@
 mkdir github_gh-aw-actions
 pushd github_gh-aw-actions
-curl -s -S -L -o '97f280b14527ca95859c0facba201aeccb2c097f.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/97f280b14527ca95859c0facba201aeccb2c097f'
-curl -s -S -L -o '97f280b14527ca95859c0facba201aeccb2c097f.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/97f280b14527ca95859c0facba201aeccb2c097f'
-curl -s -S -L -o '4c7307f890279fa5971acae8899475901fea9447.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/4c7307f890279fa5971acae8899475901fea9447'
-curl -s -S -L -o '4c7307f890279fa5971acae8899475901fea9447.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/4c7307f890279fa5971acae8899475901fea9447'
-curl -s -S -L -o '3ea13c02d765410340d533515cb31a7eef2baaf0.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/3ea13c02d765410340d533515cb31a7eef2baaf0'
-curl -s -S -L -o '3ea13c02d765410340d533515cb31a7eef2baaf0.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/3ea13c02d765410340d533515cb31a7eef2baaf0'
+curl -s -S -L -o '73ed520ae4ecd087a485e1991605595978b32ac1.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/73ed520ae4ecd087a485e1991605595978b32ac1'
+curl -s -S -L -o '73ed520ae4ecd087a485e1991605595978b32ac1.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/73ed520ae4ecd087a485e1991605595978b32ac1'
+curl -s -S -L -o '268bf92726cb8153337c07166f382ee46e4fd897.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/268bf92726cb8153337c07166f382ee46e4fd897'
+curl -s -S -L -o '268bf92726cb8153337c07166f382ee46e4fd897.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/268bf92726cb8153337c07166f382ee46e4fd897'
+curl -s -S -L -o '8cfea5ae9bee18df8e50a96affdb6d666cd7b9a3.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/8cfea5ae9bee18df8e50a96affdb6d666cd7b9a3'
+curl -s -S -L -o '8cfea5ae9bee18df8e50a96affdb6d666cd7b9a3.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/8cfea5ae9bee18df8e50a96affdb6d666cd7b9a3'
 popd

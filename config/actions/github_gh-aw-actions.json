@@ -10,17 +10,17 @@
   "latestMajorVersions": 1,
   "latestVersionsPerMajor": 3,
   "tags": {
-    "v0.77.3": {
-      "commit": "97f280b14527ca95859c0facba201aeccb2c097f",
-      "tag": "95bebce1b586aa79df3606b145ec30e01d4496ff"
+    "v0.78.1": {
+      "commit": "73ed520ae4ecd087a485e1991605595978b32ac1",
+      "tag": "ad59faa304220c09f6df1cd763fa18ee78b67468"
     },
-    "v0.77.4": {
-      "commit": "4c7307f890279fa5971acae8899475901fea9447",
-      "tag": "ce7c7186e62eceda0bf5464d82c16dfcfc11f980"
+    "v0.78.2": {
+      "commit": "268bf92726cb8153337c07166f382ee46e4fd897",
+      "tag": "cebc3387f279e86258a62c24d464a33f0f1afc9a"
     },
-    "v0.77.5": {
-      "commit": "3ea13c02d765410340d533515cb31a7eef2baaf0",
-      "tag": "9e021488ca324c9314e98e17e3f9d1c65d55cdf5"
+    "v0.78.3": {
+      "commit": "8cfea5ae9bee18df8e50a96affdb6d666cd7b9a3",
+      "tag": "daa3b0127397c0856b8248cfda04e0980b044dca"
     }
   }
 }
