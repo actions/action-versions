@@ -1,7 +1,7 @@
 mkdir github_codeql-action
 pushd github_codeql-action
-curl -s -S -L -o 'eda5730a8bfb740e03a28087a958444c646e5842.tar.gz' 'https://api.github.com/repos/github/codeql-action/tarball/eda5730a8bfb740e03a28087a958444c646e5842'
-curl -s -S -L -o 'eda5730a8bfb740e03a28087a958444c646e5842.zip' 'https://api.github.com/repos/github/codeql-action/zipball/eda5730a8bfb740e03a28087a958444c646e5842'
+curl -s -S -L -o 'f3f1edbedfb4a1d188d344570834df2996d45d39.tar.gz' 'https://api.github.com/repos/github/codeql-action/tarball/f3f1edbedfb4a1d188d344570834df2996d45d39'
+curl -s -S -L -o 'f3f1edbedfb4a1d188d344570834df2996d45d39.zip' 'https://api.github.com/repos/github/codeql-action/zipball/f3f1edbedfb4a1d188d344570834df2996d45d39'
 curl -s -S -L -o '8aad20d150bbac5944a9f9d289da16a4b0d87c1e.tar.gz' 'https://api.github.com/repos/github/codeql-action/tarball/8aad20d150bbac5944a9f9d289da16a4b0d87c1e'
 curl -s -S -L -o '8aad20d150bbac5944a9f9d289da16a4b0d87c1e.zip' 'https://api.github.com/repos/github/codeql-action/zipball/8aad20d150bbac5944a9f9d289da16a4b0d87c1e'
 curl -s -S -L -o '87557b9c84dde89fdd9b10e88954ac2f4248e463.tar.gz' 'https://api.github.com/repos/github/codeql-action/tarball/87557b9c84dde89fdd9b10e88954ac2f4248e463'
