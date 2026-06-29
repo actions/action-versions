@@ -6,7 +6,7 @@
     "+^v[3-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "f4a67bbeca970f103397d3d2b9462cf787cd2980"
+    "main": "6a61c0375d66246de94630495909f12cf8dac84d"
   },
   "defaultBranch": "main",
   "tags": {
