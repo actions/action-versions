@@ -4,16 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       releaseVersion:
-        description: 'The next release version to use in the format of v1.x.x'
-        required: true
+        description: 'Optional release version to use in the format of v1.x.x. If omitted, the next patch version after the latest release is used.'
+        required: false
   push:
     branches:
       - main
   pull_request: {}
 
+concurrency:
+  group: ci-release-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,9 +39,41 @@ jobs:
       - name: Test zipball
         run: ./script/test.sh ./_layout/action-versions.zip
 
-      - name: Release
-        if: github.event_name == 'workflow_dispatch'
+      - name: Determine next version
+        id: version
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
         run: |
-          gh release create ${{github.event.inputs.releaseVersion}} --generate-notes ./_layout/action-versions.zip ./_layout/action-versions.tar.gz
+          set -euo pipefail
+          input_version="${{ github.event.inputs.releaseVersion }}"
+          if [ -n "$input_version" ]; then
+            next_version="$input_version"
+            echo "Using manually provided release version: $next_version"
+          else
+            latest_tag="$(gh release view --json tagName --jq .tagName 2>/dev/null || true)"
+            if [ -z "$latest_tag" ]; then
+              latest_tag="v1.0.0"
+              echo "No prior release found. Defaulting base to $latest_tag"
+            else
+              echo "Latest release tag: $latest_tag"
+            fi
+            if [[ ! "$latest_tag" =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+              echo "Error: latest release tag '$latest_tag' is not in vMAJOR.MINOR.PATCH format." >&2
+              echo "Re-run the workflow via workflow_dispatch and supply an explicit releaseVersion." >&2
+              exit 1
+            fi
+            major="${BASH_REMATCH[1]}"
+            minor="${BASH_REMATCH[2]}"
+            patch="${BASH_REMATCH[3]}"
+            next_version="v${major}.${minor}.$((patch + 1))"
+            echo "Computed next version: $next_version"
+          fi
+          echo "next_version=$next_version" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Release
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+        run: |
+          gh release create ${{ steps.version.outputs.next_version }} --generate-notes ./_layout/action-versions.zip ./_layout/action-versions.tar.gz
         env:
           GH_TOKEN: ${{ github.token }}
