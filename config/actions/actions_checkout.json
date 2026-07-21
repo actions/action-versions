@@ -6,12 +6,12 @@
     "+^v[3-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "3d3c42e5aac5ba805825da76410c181273ba90b1"
+    "main": "f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a"
   },
   "defaultBranch": "main",
   "tags": {
     "v3": {
-      "commit": "f43a0e5ff2bd294095638e18286ca9a3d1956744"
+      "commit": "a37ce9120846195fa4ece8f58b268e6043cb2f26"
     },
     "v3.0.0": {
       "commit": "a12a3943b4bdde767164f792f33f40b04645d846"
@@ -49,8 +49,11 @@
     "v3.6.0": {
       "commit": "f43a0e5ff2bd294095638e18286ca9a3d1956744"
     },
+    "v3.7.0": {
+      "commit": "a37ce9120846195fa4ece8f58b268e6043cb2f26"
+    },
     "v4": {
-      "commit": "34e114876b0b11c390a56381ad16ebd13914f8d5"
+      "commit": "11d5960a326750d5838078e36cf38b85af677262"
     },
     "v4.0.0": {
       "commit": "1e31de5234b9f8995739874a8ce0492dc87873e2"
@@ -94,8 +97,11 @@
     "v4.3.1": {
       "commit": "34e114876b0b11c390a56381ad16ebd13914f8d5"
     },
+    "v4.4.0": {
+      "commit": "11d5960a326750d5838078e36cf38b85af677262"
+    },
     "v5": {
-      "commit": "93cb6efe18208431cddfb8368fd83d5badbf9bfd"
+      "commit": "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09"
     },
     "v5.0.0": {
       "commit": "08c6903cd8c0fde910a37f88322edcfb5dd907a8"
@@ -103,8 +109,11 @@
     "v5.0.1": {
       "commit": "93cb6efe18208431cddfb8368fd83d5badbf9bfd"
     },
+    "v5.1.0": {
+      "commit": "fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09"
+    },
     "v6": {
-      "commit": "df4cb1c069e1874edd31b4311f1884172cec0e10"
+      "commit": "d23441a48e516b6c34aea4fa41551a30e30af803"
     },
     "v6.0.0": {
       "commit": "1af3b93b6815bc44a9784bd300feb67ff0d1eeb3"
@@ -119,11 +128,17 @@
       "commit": "df4cb1c069e1874edd31b4311f1884172cec0e10",
       "tag": "9f698171ed81b15d1823a05fc7211befd50c8ae0"
     },
+    "v6.1.0": {
+      "commit": "d23441a48e516b6c34aea4fa41551a30e30af803"
+    },
     "v7": {
-      "commit": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0"
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1"
     },
     "v7.0.0": {
       "commit": "9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0"
+    },
+    "v7.0.1": {
+      "commit": "3d3c42e5aac5ba805825da76410c181273ba90b1"
     }
   }
 }
