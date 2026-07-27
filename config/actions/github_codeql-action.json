@@ -6,23 +6,23 @@
     "+^v[4-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "bfb6be4b5ecd3650f02f530571453e8c64ef0778"
+    "main": "3434fbbc53af0fe47685ef3897703b39ef77b5cb"
   },
   "defaultBranch": "main",
   "latestMajorVersions": 1,
   "latestVersionsPerMajor": 2,
   "tags": {
     "v4": {
-      "commit": "e0647621c2984b5ed2f768cb892365bf2a616ad1",
-      "tag": "e4c79b4e9ebfe577d446333c2e31ed81079e7b03"
-    },
-    "v4.37.1": {
-      "commit": "7188fc363630916deb702c7fdcf4e481b751f97a",
-      "tag": "bb16b9baa2ec4010b29f5c606d57d01190139edd"
+      "commit": "e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81",
+      "tag": "adfda868f108ac4222129de456ea554034a27db7"
     },
     "v4.37.2": {
       "commit": "e0647621c2984b5ed2f768cb892365bf2a616ad1",
       "tag": "26dfab68fffc1cbc36c56970c32f0e53cf1fcc01"
+    },
+    "v4.37.3": {
+      "commit": "e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81",
+      "tag": "c54b30b7df092240050e69945842bc67aee0f0f4"
     }
   }
 }
