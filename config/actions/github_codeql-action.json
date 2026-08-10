@@ -6,23 +6,23 @@
     "+^v[4-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "1cd4d01d58f636bbdbffbfd3c121b3446d07e9f3"
+    "main": "7d9249f5a57288b8a472ddd9cc3ece1921f7dc38"
   },
   "defaultBranch": "main",
   "latestMajorVersions": 1,
   "latestVersionsPerMajor": 2,
   "tags": {
     "v4": {
-      "commit": "f205ea1c3313d32999d8d6a48b4f6530d4437b38",
-      "tag": "bce182f857edf1feab116e9795a3393d21977282"
+      "commit": "5595ccaf912efad79be6eef63a5619ff05969be3",
+      "tag": "24c7eb380a2dc368f2d129e4c65e51d172983a1e"
     },
-    "v4.37.3": {
-      "commit": "e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81",
-      "tag": "c54b30b7df092240050e69945842bc67aee0f0f4"
+    "v4.37.5": {
+      "commit": "d1ba80a13dd99fba24a470575428917156a28b43",
+      "tag": "85689a103d1234521562bbb736b2c4a31c9a85d5"
     },
-    "v4.37.4": {
-      "commit": "f205ea1c3313d32999d8d6a48b4f6530d4437b38",
-      "tag": "ea14db8afdef5d462e69d78c4ca45002d4522418"
+    "v4.37.6": {
+      "commit": "5595ccaf912efad79be6eef63a5619ff05969be3",
+      "tag": "9e3211c9a3b9311dfe05da2ed48eea3386f042dd"
     }
   }
 }
