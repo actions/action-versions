@@ -1,9 +1,7 @@
 mkdir github_gh-aw-actions
 pushd github_gh-aw-actions
-curl -s -S -L -o '13f59f7032b1e9a26305dada85d6b99fa2a5e649.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/13f59f7032b1e9a26305dada85d6b99fa2a5e649'
-curl -s -S -L -o '13f59f7032b1e9a26305dada85d6b99fa2a5e649.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/13f59f7032b1e9a26305dada85d6b99fa2a5e649'
-curl -s -S -L -o '7a073567000cd18a81b85d31527ac08d414c9599.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/7a073567000cd18a81b85d31527ac08d414c9599'
-curl -s -S -L -o '7a073567000cd18a81b85d31527ac08d414c9599.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/7a073567000cd18a81b85d31527ac08d414c9599'
-curl -s -S -L -o '866158eb5c6cbfd3c614104e3d3d6634e246d220.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/866158eb5c6cbfd3c614104e3d3d6634e246d220'
-curl -s -S -L -o '866158eb5c6cbfd3c614104e3d3d6634e246d220.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/866158eb5c6cbfd3c614104e3d3d6634e246d220'
+curl -s -S -L -o '9b6239065cc3a210544331a9a1888be1b11c9686.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/9b6239065cc3a210544331a9a1888be1b11c9686'
+curl -s -S -L -o '9b6239065cc3a210544331a9a1888be1b11c9686.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/9b6239065cc3a210544331a9a1888be1b11c9686'
+curl -s -S -L -o '221ba4f4319de6b8e809d1a15528b3ae6a818aa5.tar.gz' 'https://api.github.com/repos/github/gh-aw-actions/tarball/221ba4f4319de6b8e809d1a15528b3ae6a818aa5'
+curl -s -S -L -o '221ba4f4319de6b8e809d1a15528b3ae6a818aa5.zip' 'https://api.github.com/repos/github/gh-aw-actions/zipball/221ba4f4319de6b8e809d1a15528b3ae6a818aa5'
 popd
