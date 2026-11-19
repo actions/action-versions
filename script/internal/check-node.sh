@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ -z "$(which node || exit 0)" ]; then
   echo "Unable to find 'node' in the PATH"
