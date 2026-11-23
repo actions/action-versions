@@ -6,23 +6,23 @@
     "+^v[4-9]+(\\.[0-9]+){0,2}$"
   ],
   "branches": {
-    "main": "0911ee96d2d6c8def97122c36c5cadd93829a4b4"
+    "main": "38112626f97ac1fd7acf3df7ebca51f4677c1b38"
   },
   "defaultBranch": "main",
   "latestMajorVersions": 1,
   "latestVersionsPerMajor": 2,
   "tags": {
     "v4": {
-      "commit": "33d7b85da1a04171e211befe2c739303b9a4c066",
-      "tag": "5895b2c9be147bc7f1c75ce72c5cb577febb1907"
-    },
-    "v4.39.2": {
-      "commit": "1fc58d04a4d4374f921bdac573c3811c240f9c26",
-      "tag": "bd01fe9e80db3cb1eb1368bd8f61d3eb5f43d1f4"
+      "commit": "1bd86f2fdb4b86187fa4059f16f31a3202acc9ea",
+      "tag": "800a1d8701a65d150a672fef0923dbf2660a62ec"
     },
     "v4.39.3": {
       "commit": "33d7b85da1a04171e211befe2c739303b9a4c066",
       "tag": "f3bbb05694c2f74569081c28664c0866d64dec21"
+    },
+    "v4.39.4": {
+      "commit": "1bd86f2fdb4b86187fa4059f16f31a3202acc9ea",
+      "tag": "e0462179768953fd6790193e15caaef674ff709e"
     }
   }
 }
